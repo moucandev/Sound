@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="AbsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AbsTheme">
+    </style>
+    <style name="collapsedTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColorPrimary">@color/colorIcon</item>
+        <item name="android:textColor">@color/colorIcon</item>
+    </style>
+    <style name="ToolbarTheme">
+        <item name="android:textColorPrimary">@color/colorIcon</item>
+        <item name="android:textColorSecondary">@color/colorIcon</item>
+    </style>
+    <style name="AbsPlayDetailTheme" parent="AppTheme">
+    </style>
+    <style name="PlayDetailTheme" parent="AbsPlayDetailTheme">
+    </style>
+    <style name="AlbumTheme" parent="AppTheme">
+    </style>
+    <style name="QuickDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorIcon</item>
+        <item name="windowMinWidthMajor">65%</item>
+        <item name="windowMinWidthMinor">80%</item>
+    </style>
+    <style name="ThumbTransitionStyle">
+    </style>
+</resources>
+

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.johnnie.sound.activity.PlayDetailActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/play_detail_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:theme="@style/ToolbarTheme"
+            />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/play_detail_thumb"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitCenter"
+        style="@style/ThumbTransitionStyle"
+        />
+
+    <LinearLayout
+        android:id="@+id/play_detail_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+            <TextView
+                android:id="@+id/play_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+            <TextView
+                android:id="@+id/play_detail_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@android:color/darker_gray"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                />
+            <TextView
+                android:id="@+id/play_detail_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@android:color/darker_gray"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <!--显示播放进度-->
+
+        <SeekBar
+            android:id="@+id/play_detail_seek_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:padding="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/play_detail_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/play_detail_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="00:00"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/play_detail_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="00:00"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/play_detail_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/play_detail_rule_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_item_round_sel"
+                app:srcCompat="@drawable/ic_repeat"/>
+
+            <ImageView
+                android:id="@+id/play_detail_previous"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_item_round_sel"
+                app:srcCompat="@drawable/ic_skip_previous_white_36dp" />
+
+            <ImageView
+                android:id="@+id/play_detail_play_pause"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_item_round_sel"
+                app:srcCompat="@drawable/ic_play_pause_sel"/>
+            <ImageView
+                android:id="@+id/play_detail_next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_item_round_sel"
+                app:srcCompat="@drawable/ic_skip_next_white_36dp"/>
+
+            <ImageView
+                android:id="@+id/play_detail_play_list"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_item_round_sel"
+                app:srcCompat="@drawable/ic_notification_queue_music"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
